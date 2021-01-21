@@ -11,6 +11,7 @@ declare module 'card-validator' {
         | 'maestro'
         | 'mastercard'
         | 'unionpay'
+        | 'visa'
         | 'mada';
 
     interface CreditCardTypeInfo {
