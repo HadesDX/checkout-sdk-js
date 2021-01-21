@@ -11,7 +11,7 @@ declare module 'card-validator' {
         | 'maestro'
         | 'mastercard'
         | 'unionpay'
-        | 'visa';
+        | 'mada';
 
     interface CreditCardTypeInfo {
         patterns?: Array<number | [number, number]>;
@@ -32,6 +32,7 @@ declare module 'card-validator' {
         (cardNumber: string): CreditCardTypeInfo[];
         getTypeInfo(type: string): CreditCardTypeInfo;
         updateCard(type: string, updates: Partial<CreditCardTypeInfo>): void;
+        addCard(config: Partial<CreditCardTypeInfo>): void;
     }
 
     export const creditCardType: CreditCardType;
